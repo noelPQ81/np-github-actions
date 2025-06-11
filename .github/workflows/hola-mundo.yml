@@ -1,6 +1,8 @@
+name: Aprendiendo github actions
+run-name: Estoy aprendiendo github actions!!!
 on: [push]
 jobs:
-  setup-java:
+  hola-mundo:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Java JDK
