@@ -4,29 +4,29 @@ on:
   push:
     branches:
       - aprendiendo-github-actions
-#  pull_request:
-#    types: [opened, synchronize, reopened]
-#    paths:
-#      - '**.py'
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '**.py'
 #  issues:
 #    types:
 #      - labeled
-#  workflow_dispatch:
-#    inputs:
-#      lenguaje_favorito:
-#        description: 'Lenguaje favorito'
-#        default: Python
-#        required: true
-#        type: choice
-#        options:
-#        - Python
-#        - JavaScript
-#        - Go
-#      nombre:
-#        description: 'Tu nombre'
-#        required: true
-#        default: Juan
-#        type: string
+  workflow_dispatch:
+    inputs:
+      lenguaje_favorito:
+        description: 'Lenguaje favorito'
+        default: Python
+        required: true
+        type: choice
+        options:
+        - Python
+        - JavaScript
+        - Go
+      nombre:
+        description: 'Noel'
+        required: true
+        default: Juan
+        type: string
 #  schedule:
 #    - cron:  '15 22 * * *'
 jobs:
