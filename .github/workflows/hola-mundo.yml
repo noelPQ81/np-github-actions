@@ -3,21 +3,18 @@ run-name: Estoy aprendiendo github actions!!!
 
 on: [push]
 jobs:
-  setup-java:
+#  setup-java:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-
-      - name: Setup Java JDK
-        uses: actions/setup-java@v3.12.0
-        with:
-          distribution: oracle
-          java-version: 17
-          java-package: jdk
-
       - name: Checkout code
         uses: actions/@Checkout@v2
 
-      - name: Compile and run Java code
+      - name: Mostrar version de linux
+        run:  uname -a
+
+      - name: Ejecutar script en shell
         run: |
-            javac Entrada.java
-            java Entrada
+            echo "Hola desde Linux ubuntu"
+            ls -altr
