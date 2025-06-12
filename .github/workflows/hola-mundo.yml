@@ -3,18 +3,12 @@ run-name: Estoy aprendiendo github actions!!!
 
 on: [push]
 jobs:
-#  setup-java:
-  build:
+  hola-mundo:
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Checkout code
-        uses: actions/@Checkout@v2
-
-      - name: Mostrar version de linux
-        run:  uname -a
-
-      - name: Ejecutar script en shell
-        run: |
-            echo "Hola desde Linux ubuntu"
-            ls -altr
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Definir variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+      - name: Correr script
+        run: python hola_mundo.py
